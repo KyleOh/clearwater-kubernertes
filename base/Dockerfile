@@ -7,6 +7,8 @@ ARG NO_PROXY
 ENV http_proxy $PROXY
 ENV https_proxy $PROXY
 
+RUN sed -i 's/archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
+RUN sed -i 's/security.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 RUN no_proxy=$NO_PROXY apt-get update && DEBIAN_FRONTEND=noninteractiveno_proxy=$NO_PROXY apt-get install -y openssh-server supervisor curl
 RUN mkdir -p /var/run/sshd /var/log/supervisor
 RUN echo 'root:root' | chpasswd
