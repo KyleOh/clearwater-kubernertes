@@ -134,6 +134,7 @@ function rebase_images()
       echo "ARG PROXY" >> Dockerfile.new
       echo "ENV http_proxy \$PROXY" >> Dockerfile.new
       echo "ENV https_proxy \$PROXY" >> Dockerfile.new
+      echo "RUN sed -i 's/archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list"
       echo "RUN no_proxy=$NO_PROXY apt-get update && no_proxy=$NO_PROXY apt-get -y install tcpdump ngrep curl dnsutils nmap ldnsutils" >> Dockerfile.new
       echo "COPY rndc-key /root/rndc-key" >> Dockerfile.new
       echo "COPY start.sh /root/start.sh" >> Dockerfile.new
