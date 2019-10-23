@@ -310,23 +310,23 @@
                       "containers": [
                         {
                           "name": "bind-authorative",
-                          "image": "REGISTRY_HOST/IMAGE_PREFIX/clearwater/bind-test",
+                          "image": "192.168.10.107:5000/clearwater/bind-test",
                           "env": [
                             {
                               "name": "RNDCKEY",
-                              "value": "DNSKEY"
+                              "value": "VBJev6+xzhFVXXYY7tAq4A=="
                             },
                             {
                               "name": "DNSZONE",
-                              "value": "USERZONE"
+                              "value": "clearwater-dns-service.default.svc.cluster.local"
                             },
                             {
                               "name": "DNS_FORWARDER_1",
-                              "value": "DNSFORWARDER1"
+                              "value": "8.8.8.8"
                             },
                             {
                               "name": "DNS_FORWARDER_2",
-                              "value": "DNSFORWARDER2"
+                              "value": "8.8.4.4"
                             }
                           ]
                        }
@@ -361,26 +361,26 @@
                       "containers": [
                           {
                               "name": "bono",
-                              "image": "REGISTRY_HOST/IMAGE_PREFIX/clearwater/bono-test",
+                              "image": "192.168.10.107:5000/clearwater/bono-test",
                               "command": [
                                   "/root/start.sh"
                               ],
                               "env": [
                                   {
                                       "name": "ZONE",
-                                      "value": "USERZONE"
+                                      "value": "clearwater-dns-service.default.svc.cluster.local"
                                   },
                                   {
                                       "name": "RNDCKEY",
-                                      "value": "DNSKEY"
+                                      "value": "VBJev6+xzhFVXXYY7tAq4A=="
                                   },
                                   {
                                       "name": "DNSZONE",
-                                      "value": "USERZONE"
+                                      "value": "clearwater-dns-service.default.svc.cluster.local"
                                   },
                                   {
                                       "name": "PUBLIC_IP",
-                                      "value": "NODEHOST"
+                                      "value": "192.168.10.107"
                                   }
                               ]
                           }
@@ -415,22 +415,22 @@
                       "containers": [
                           {
                               "name": "cassandra",
-                              "image": "REGISTRY_HOST/IMAGE_PREFIX/clearwater/cassandra-test",
+                              "image": "192.168.10.107:5000/clearwater/cassandra-test",
                               "command": [
                                   "/root/start.sh"
                               ],
                               "env": [
                                   {
                                       "name": "ZONE",
-                                      "value": "USERZONE"
+                                      "value": "clearwater-dns-service.default.svc.cluster.local"
                                   },
                                   {
                                       "name": "RNDCKEY",
-                                      "value": "DNSKEY"
+                                      "value": "VBJev6+xzhFVXXYY7tAq4A=="
                                   },
                                   {
                                       "name": "DNSZONE",
-                                      "value": "USERZONE"
+                                      "value": "clearwater-dns-service.default.svc.cluster.local"
                                   }
                               ]
                           }
@@ -465,22 +465,22 @@
                       "containers": [
                           {
                               "name": "chronos",
-                              "image": "REGISTRY_HOST/IMAGE_PREFIX/clearwater/chronos-test",
+                              "image": "192.168.10.107:5000/clearwater/chronos-test",
                               "command": [
                                   "/root/start.sh"
                               ],
                               "env": [
                                   {
                                       "name": "ZONE",
-                                      "value": "USERZONE"
+                                      "value": "clearwater-dns-service.default.svc.cluster.local"
                                   },
                                   {
                                       "name": "RNDCKEY",
-                                      "value": "DNSKEY"
+                                      "value": "VBJev6+xzhFVXXYY7tAq4A=="
                                   },
                                   {
                                       "name": "DNSZONE",
-                                      "value": "USERZONE"
+                                      "value": "clearwater-dns-service.default.svc.cluster.local"
                                   }
                               ]
                           }
@@ -515,22 +515,22 @@
                       "containers": [
                           {
                               "name": "ellis",
-                              "image": "REGISTRY_HOST/IMAGE_PREFIX/clearwater/ellis-test",
+                              "image": "192.168.10.107:5000/clearwater/ellis-test",
                               "command": [
                                   "/root/start.sh"
                               ],
                               "env": [
                                   {
                                       "name": "ZONE",
-                                      "value": "USERZONE"
+                                      "value": "clearwater-dns-service.default.svc.cluster.local"
                                   },
                                   {
                                       "name": "RNDCKEY",
-                                      "value": "DNSKEY"
+                                      "value": "VBJev6+xzhFVXXYY7tAq4A=="
                                   },
                                   {
                                       "name": "DNSZONE",
-                                      "value": "USERZONE"
+                                      "value": "clearwater-dns-service.default.svc.cluster.local"
                                   }
                               ]
                           }
@@ -562,27 +562,25 @@
                       }
                   },
                   "spec": {
-                      "hostname": "etcd",
-                      "subdomain": "clearwater-dns-service",
                       "containers": [
                           {
                               "name": "etcd",
-                              "image": "REGISTRY_HOST/IMAGE_PREFIX/clearwater/etcd-test",
+                              "image": "192.168.10.107:5000/clearwater/etcd-test",
                               "command": [
                                   "/root/start.sh"
                               ],
                               "env": [
                                   {
                                       "name": "ZONE",
-                                      "value": "USERZONE"
+                                      "value": "clearwater-dns-service.default.svc.cluster.local"
                                   },
                                   {
                                       "name": "RNDCKEY",
-                                      "value": "DNSKEY"
+                                      "value": "VBJev6+xzhFVXXYY7tAq4A=="
                                   },
                                   {
                                       "name": "DNSZONE",
-                                      "value": "USERZONE"
+                                      "value": "clearwater-dns-service.default.svc.cluster.local"
                                   }
                               ]
                           }
@@ -617,22 +615,22 @@
                       "containers": [
                           {
                               "name": "homer",
-                              "image": "REGISTRY_HOST/IMAGE_PREFIX/clearwater/homer-test",
+                              "image": "192.168.10.107:5000/clearwater/homer-test",
                               "command": [
                                   "/root/start.sh"
                               ],
                               "env": [
                                   {
                                       "name": "ZONE",
-                                      "value": "USERZONE"
+                                      "value": "clearwater-dns-service.default.svc.cluster.local"
                                   },
                                   {
                                       "name": "RNDCKEY",
-                                      "value": "DNSKEY"
+                                      "value": "VBJev6+xzhFVXXYY7tAq4A=="
                                   },
                                   {
                                       "name": "DNSZONE",
-                                      "value": "USERZONE"
+                                      "value": "clearwater-dns-service.default.svc.cluster.local"
                                   }
                               ]
                           }
@@ -667,22 +665,22 @@
                       "containers": [
                           {
                               "name": "homestead",
-                              "image": "REGISTRY_HOST/IMAGE_PREFIX/clearwater/homestead-test",
+                              "image": "192.168.10.107:5000/clearwater/homestead-test",
                               "command": [
                                   "/root/start.sh"
                               ],
                               "env": [
                                   {
                                       "name": "ZONE",
-                                      "value": "USERZONE"
+                                      "value": "clearwater-dns-service.default.svc.cluster.local"
                                   },
                                   {
                                       "name": "RNDCKEY",
-                                      "value": "DNSKEY"
+                                      "value": "VBJev6+xzhFVXXYY7tAq4A=="
                                   },
                                   {
                                       "name": "DNSZONE",
-                                      "value": "USERZONE"
+                                      "value": "clearwater-dns-service.default.svc.cluster.local"
                                   }
                               ]
                           }
@@ -717,22 +715,22 @@
                       "containers": [
                           {
                               "name": "memcached",
-                              "image": "REGISTRY_HOST/IMAGE_PREFIX/clearwater/memcached-test",
+                              "image": "192.168.10.107:5000/clearwater/memcached-test",
                               "command": [
                                   "/root/start.sh"
                               ],
                               "env": [
                                   {
                                       "name": "ZONE",
-                                      "value": "USERZONE"
+                                      "value": "clearwater-dns-service.default.svc.cluster.local"
                                   },
                                   {
                                       "name": "RNDCKEY",
-                                      "value": "DNSKEY"
+                                      "value": "VBJev6+xzhFVXXYY7tAq4A=="
                                   },
                                   {
                                       "name": "DNSZONE",
-                                      "value": "USERZONE"
+                                      "value": "clearwater-dns-service.default.svc.cluster.local"
                                   }
                               ]
                           }
@@ -767,22 +765,22 @@
                       "containers": [
                           {
                               "name": "ralf",
-                              "image": "REGISTRY_HOST/IMAGE_PREFIX/clearwater/ralf-test",
+                              "image": "192.168.10.107:5000/clearwater/ralf-test",
                               "command": [
                                   "/root/start.sh"
                               ],
                               "env": [
                                   {
                                       "name": "ZONE",
-                                      "value": "USERZONE"
+                                      "value": "clearwater-dns-service.default.svc.cluster.local"
                                   },
                                   {
                                       "name": "RNDCKEY",
-                                      "value": "DNSKEY"
+                                      "value": "VBJev6+xzhFVXXYY7tAq4A=="
                                   },
                                   {
                                       "name": "DNSZONE",
-                                      "value": "USERZONE"
+                                      "value": "clearwater-dns-service.default.svc.cluster.local"
                                   }
                               ]
                           }
@@ -817,22 +815,22 @@
                       "containers": [
                           {
                               "name": "sprout",
-                              "image": "REGISTRY_HOST/IMAGE_PREFIX/clearwater/sprout-test",
+                              "image": "192.168.10.107:5000/clearwater/sprout-test",
                               "command": [
                                   "/root/start.sh"
                               ],
                               "env": [
                                   {
                                       "name": "ZONE",
-                                      "value": "USERZONE"
+                                      "value": "clearwater-dns-service.default.svc.cluster.local"
                                   },
                                   {
                                       "name": "RNDCKEY",
-                                      "value": "DNSKEY"
+                                      "value": "VBJev6+xzhFVXXYY7tAq4A=="
                                   },
                                   {
                                       "name": "DNSZONE",
-                                      "value": "USERZONE"
+                                      "value": "clearwater-dns-service.default.svc.cluster.local"
                                   }
                               ]
                           }
