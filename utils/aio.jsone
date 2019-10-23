@@ -562,6 +562,8 @@
                       }
                   },
                   "spec": {
+                      "hostname": "etcd",
+                      "subdomain": "clearwater-dns-service",
                       "containers": [
                           {
                               "name": "etcd",
