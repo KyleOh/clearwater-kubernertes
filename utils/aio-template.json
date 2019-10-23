@@ -285,8 +285,8 @@
           }
       },
       {
-          "kind": "ReplicationController",
-          "apiVersion": "v1",
+          "kind": "Deployment",
+          "apiVersion": "apps/v1",
           "metadata": {
               "name": "clearwater-dns-service",
               "labels": {
@@ -296,7 +296,9 @@
           "spec": {
               "replicas": 1,
               "selector": {
-                  "app": "clearwater-dns-service"
+                  "matchLabels": {
+                      "app": "clearwater-dns-service"
+                  }
               },
               "template": {
                   "metadata": {
@@ -334,8 +336,8 @@
           }
       },
       {
-          "kind": "ReplicationController",
-          "apiVersion": "v1",
+          "kind": "Deployment",
+          "apiVersion": "apps/v1",
           "metadata": {
               "name": "clearwater-bono",
               "labels": {
@@ -345,7 +347,9 @@
           "spec": {
               "replicas": 1,
               "selector": {
-                  "clearwater": "bono"
+                  "matchLabels": {
+                      "clearwater": "bono"
+                  }
               },
               "template": {
                   "metadata": {
@@ -386,8 +390,8 @@
           }
       },
       {
-          "kind": "ReplicationController",
-          "apiVersion": "v1",
+          "kind": "Deployment",
+          "apiVersion": "apps/v1",
           "metadata": {
               "name": "clearwater-cassandra",
               "labels": {
@@ -397,7 +401,9 @@
           "spec": {
               "replicas": 1,
               "selector": {
-                  "clearwater": "cassandra"
+                  "matchLabels": {
+                      "clearwater": "cassandra"
+                  }
               },
               "template": {
                   "metadata": {
@@ -434,8 +440,8 @@
           }
       },
       {
-          "kind": "ReplicationController",
-          "apiVersion": "v1",
+          "kind": "Deployment",
+          "apiVersion": "apps/v1",
           "metadata": {
               "name": "clearwater-chronos",
               "labels": {
@@ -445,7 +451,9 @@
           "spec": {
               "replicas": 1,
               "selector": {
-                  "clearwater": "chronos"
+                  "matchLabels": {
+                      "clearwater": "chronos"
+                  }
               },
               "template": {
                   "metadata": {
@@ -482,8 +490,8 @@
           }
       },
       {
-          "kind": "ReplicationController",
-          "apiVersion": "v1",
+          "kind": "Deployment",
+          "apiVersion": "apps/v1",
           "metadata": {
               "name": "clearwater-ellis",
               "labels": {
@@ -493,7 +501,9 @@
           "spec": {
               "replicas": 1,
               "selector": {
-                  "clearwater": "ellis"
+                  "matchLabels": {
+                      "clearwater": "ellis"
+                  }
               },
               "template": {
                   "metadata": {
@@ -530,8 +540,8 @@
           }
       },
       {
-          "kind": "ReplicationController",
-          "apiVersion": "v1",
+          "kind": "Deployment",
+          "apiVersion": "apps/v1",
           "metadata": {
               "name": "clearwater-etcd",
               "labels": {
@@ -541,7 +551,9 @@
           "spec": {
               "replicas": 1,
               "selector": {
-                  "clearwater": "etcd"
+                  "matchLabels": {
+                      "clearwater": "etcd"
+                  }
               },
               "template": {
                   "metadata": {
@@ -578,8 +590,8 @@
           }
       },
       {
-          "kind": "ReplicationController",
-          "apiVersion": "v1",
+          "kind": "Deployment",
+          "apiVersion": "apps/v1",
           "metadata": {
               "name": "clearwater-homer",
               "labels": {
@@ -589,7 +601,9 @@
           "spec": {
               "replicas": 1,
               "selector": {
-                  "clearwater": "homer"
+                  "matchLabels": {
+                      "clearwater": "homer"
+                  }
               },
               "template": {
                   "metadata": {
@@ -626,8 +640,8 @@
           }
       },
       {
-          "kind": "ReplicationController",
-          "apiVersion": "v1",
+          "kind": "Deployment",
+          "apiVersion": "apps/v1",
           "metadata": {
               "name": "clearwater-homestead",
               "labels": {
@@ -637,7 +651,9 @@
           "spec": {
               "replicas": 1,
               "selector": {
-                  "clearwater": "homestead"
+                  "matchLabels": {
+                      "clearwater": "homestead"
+                  }
               },
               "template": {
                   "metadata": {
@@ -674,8 +690,8 @@
           }
       },
       {
-          "kind": "ReplicationController",
-          "apiVersion": "v1",
+          "kind": "Deployment",
+          "apiVersion": "apps/v1",
           "metadata": {
               "name": "clearwater-memcached",
               "labels": {
@@ -685,7 +701,9 @@
           "spec": {
               "replicas": 1,
               "selector": {
-                  "clearwater": "memcached"
+                  "matchLabels": {
+                      "clearwater": "memcached"
+                  }
               },
               "template": {
                   "metadata": {
@@ -722,8 +740,8 @@
           }
       },
       {
-          "kind": "ReplicationController",
-          "apiVersion": "v1",
+          "kind": "Deployment",
+          "apiVersion": "apps/v1",
           "metadata": {
               "name": "clearwater-ralf",
               "labels": {
@@ -733,7 +751,9 @@
           "spec": {
               "replicas": 1,
               "selector": {
-                  "clearwater": "ralf"
+                  "matchLabels": {
+                      "clearwater": "ralf"
+                  }
               },
               "template": {
                   "metadata": {
@@ -770,8 +790,8 @@
           }
       },
       {
-          "kind": "ReplicationController",
-          "apiVersion": "v1",
+          "kind": "Deployment",
+          "apiVersion": "apps/v1",
           "metadata": {
               "name": "clearwater-sprout",
               "labels": {
@@ -781,7 +801,9 @@
           "spec": {
               "replicas": 1,
               "selector": {
-                  "clearwater": "sprout"
+                  "matchLabels": {
+                      "clearwater": "sprout"
+                  }
               },
               "template": {
                   "metadata": {
